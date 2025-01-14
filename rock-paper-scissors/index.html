@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="game-container">
-    <h1>Rock Paper Scissors Game</h1>
-    <div class="choices">
-      <button id="rock">Rock</button>
-      <button id="paper">Paper</button>
-      <button id="scissors">Scissors</button>
+  <div class="game-wrapper">
+    <h1>Rock Paper Scissors</h1>
+    <div class="choice-options">
+      <button id="choice-rock" class="game-button">
+        <i class="fas fa-hand-rock"></i>
+        <span>Rock</span>
+      </button>
+      <button id="choice-paper" class="game-button">
+        <i class="fas fa-hand-paper"></i>
+        <span>Paper</span>
+      </button>
+      <button id="choice-scissors" class="game-button">
+        <i class="fas fa-hand-scissors"></i>
+        <span>Scissors</span>
+      </button>
     </div>
-    <div id="score">Player: 0 | Computer: 0</div>
-    <div id="result">Choose an option to start!</div>
-    <button id="reset">Play Again</button>
+    <div class="game-status">
+      <div class="scoreboard">
+        <div class="score-box player">
+          <h3>Player</h3>
+          <span class="score" id="player-score-display">0</span>
+        </div>
+        <div class="score-box computer">
+          <h3>Computer</h3>
+          <span class="score" id="computer-score-display">0</span>
+        </div>
+      </div>
+      <div id="game-result" class="result-display">Choose your weapon!</div>
+      <button id="restart-button" class="restart-button">New Game</button>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
