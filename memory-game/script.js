@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let moves = 0;
     let matches = 0;
 
-    // Create the game board
     function createBoard() {
         cardArray.forEach((item, index) => {
             const goldenBox = document.createElement('div');
@@ -47,18 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Check for matches
     function checkForMatch() {
         const cards = document.querySelectorAll('.golden-box img');
         const optionOneId = cardsChosenId[0];
         const optionTwoId = cardsChosenId[1];
 
         if (optionOneId === optionTwoId) {
-            // If the same card is clicked, flip it back
             cards[optionOneId].style.display = 'none';
             cards[optionTwoId].style.display = 'none';
         } else if (cardsChosen[0] === cardsChosen[1]) {
-            // If cards match, keep them visible
             cards[optionOneId].style.display = 'block';
             cards[optionTwoId].style.display = 'block';
             cards[optionOneId].parentElement.removeEventListener('click', flipCard);
@@ -68,14 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
             matchCountDisplay.textContent = `Matches: ${matches}/9`;
             resultDisplay.textContent = `Score: ${matches * 2}`;
         } else {
-            // If cards don't match, flip them back
             setTimeout(() => {
                 cards[optionOneId].style.display = 'none';
                 cards[optionTwoId].style.display = 'none';
             }, 500);
         }
 
-        // Clear the chosen cards and update moves
         cardsChosen = [];
         cardsChosenId = [];
         moves++;
@@ -86,12 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Flip the card
     function flipCard() {
         const cardId = this.getAttribute('data-id');
         const cardImage = this.querySelector('img');
 
-        // Prevent flipping an already revealed card
         if (cardImage.style.display === 'block') {
             return;
         }
