@@ -1,4 +1,3 @@
-/* Global Styling */
 * {
     margin: 0;
     padding: 0;
@@ -13,78 +12,74 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Adjust to center everything on the screen */
+    justify-content: center;
     min-height: 100vh;
-    padding: 10px; /* Reduced padding for better fitting */
+    padding: 10px;
 }
 
 h1 {
-    font-size: 36px; /* Slightly smaller for fitting */
+    font-size: 36px;
     color: #3b3a3a;
     margin: 10px 0;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Main Container */
 .main-container {
-    width: 140%; /* Slightly reduced for better alignment */
+    width: 140%;
     max-width: 900px;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Reduced gap between sections */
+    gap: 20px;
 }
 
-/* Info Boxes Container - Move to Left */
 .info-box-container {
     display: flex;
-    gap: 20px; /* Reduced gap for better fitting */
+    gap: 20px;
     flex-direction: column;
-    align-items: flex-start; /* Align info boxes to the left */
-    margin-bottom: 20px; /* Added margin for spacing */
+    align-items: flex-start;
+    margin-bottom: 20px;
     position: absolute;
-    left: 10px; /* Position info boxes on the left side */
-    top: 10%; /* Adjust to align vertically */
+    left: 10px;
+    top: 10%;
 }
 
-/* Info Boxes Styling */
 .info-box {
-    background-color: #ff6f61; /* Default background color */
+    background-color: #ff6f61;
     color: white;
     border: 2px solid #e65c50;
     border-radius: 8px;
     padding: 10px;
-    font-size: 16px; /* Slightly smaller font for fitting */
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    width: 120px; /* Reduced width */
-    height: 70px; /* Reduced height */
+    width: 120px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .info-box.score {
-    background-color: #6ab04c; /* Score box color */
+    background-color: #6ab04c;
     border-color: #519839;
 }
 
 .info-box.moves {
-    background-color: #3498db; /* Moves box color */
+    background-color: #3498db;
     border-color: #2a7fbb;
 }
 
 .info-box.matches {
-    background-color: #f39c12; /* Matches box color */
+    background-color: #f39c12;
     border-color: #d4880a;
 }
 
-/* Grid and Game Board Styling */
 .game-container {
-    background-color:white;
+    background-color: white;
     border: 2px solid #ddd;
     border-radius: 8px;
-    padding: 20px; /* Reduced padding */
+    padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
@@ -96,12 +91,11 @@ h1 {
 #grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px; /* Reduced gap for compact layout */
-    width: 400px; /* Adjusted grid size for better alignment */
+    grid-gap: 15px;
+    width: 400px;
     margin: 0 auto;
 }
 
-/* Styling for the Golden Box (Clickable Area) */
 .golden-box {
     width: 100px;
     height: 100px;
@@ -128,13 +122,11 @@ h1 {
     transition: opacity 0.2s ease;
 }
 
-/* Animation for Image Reveal */
 .golden-box img.show {
     display: block;
     opacity: 1;
 }
 
-/* Responsive Design */
 @media (max-width: 500px) {
     #grid {
         grid-template-columns: repeat(3, 1fr);
